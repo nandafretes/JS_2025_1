@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sorteador de Bingo</title>
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Um azul bem claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Garante que o conteúdo preencha a tela */
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  #roleta {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffcc80; /* Laranja claro */
+    background-color: #ffe0b2; /* Laranja ainda mais claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #d84315; /* Laranja escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite alternate; /* Adiciona animação */
+  }
+
+
+
+  button {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease; /* Transição suave */
+  }
+
+  button:hover {
+    background-color: #388e3c; /* Verde mais escuro */
+  }
+
+  button:disabled {
+    background-color: #9e9e9e; /* Cinza */
+    cursor: not-allowed;
+  }
+
+  #sorteados {
+    margin-top: 30px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff; /* Branco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #sorteados h2 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  #listaSorteados {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #listaSorteados li {
+    background-color: #e0f2f1; /* Verde bem claro */
+    color: #00796b; /* Verde escuro */
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+</style>
+</head>
+<body>
+
+  <h1>Sorteador de Bingo</h1>
+
+  <div id="roleta">?</div>
+
+  <button onclick="sortearNumero()">Sortear Número</button>
+
+  <div id="sorteados">
+    <h2>Números Sorteados:</h2>
+    <ul id="listaSorteados"></ul>
+  </div>
+
+
+<script>
+  let numerosSorteados = [];
+
+  function sortearNumero() {
+    let numero;
+    do {
+      numero = Math.floor(Math.random() * 75) + 1; // Gera um número aleatório entre 1 e 75
+    } while (numerosSorteados.includes(numero)); // Garante que não repita
+
+    numerosSorteados.push(numero);
+    document.getElementById("roleta").textContent = numero;
+
+    // Adiciona o número à lista de sorteados
+    let lista = document.getElementById("listaSorteados");
+    let itemLista = document.createElement("li");
+    itemLista.textContent = numero;
+    lista.appendChild(itemLista);
+
+    // Desabilita o botão se todos os números foram sorteados
+    if (numerosSorteados.length === 75) {
+      document.querySelector("button").disabled = true;
+      document.querySelector("button").textContent = "Todos os números sorteados!";
+    }
+  }
+</script>
+
+</body>
+</html>

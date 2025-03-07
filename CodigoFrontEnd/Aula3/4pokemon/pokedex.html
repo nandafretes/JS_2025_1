@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pokémons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Todos os Pokémons</h1>
+
+    <button id="btn-ir-pesquisa">🔍 Pesquisar Pokémon</button>
+
+    <div id="pokemon-container"></div>
+
+    <script src="pokedex.js"></script>
+    <script>
+        document.getElementById("btn-ir-pesquisa").addEventListener("click", function() {
+            window.location.href = "filtro.html"; // Redireciona para a página de pesquisa
+        });
+    </script>
+</body>
+</html>

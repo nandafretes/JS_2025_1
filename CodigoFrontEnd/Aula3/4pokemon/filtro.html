@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pokédex</h1>
+
+    <input type="text" id="pokemon-input" placeholder="Digite o nome ou número">
+    <button id="buscar-btn">Buscar</button>
+
+    <div id="pokemon-info">
+        <h2 id="pokemon-nome"></h2>
+        <img id="pokemon-img" src="" alt="">
+        <p id="pokemon-tipo"></p>
+    </div>
+    <button id="btn-ir-pesquisa">🔍 Todos Pokémons</button>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("btn-ir-pesquisa").addEventListener("click", function() {
+            window.location.href = "pokedex.html"; // Redireciona para a página de pesquisa
+        });
+    </script>
+</body>
+</html>

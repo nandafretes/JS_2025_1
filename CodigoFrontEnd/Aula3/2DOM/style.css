@@ -1,0 +1,14 @@
+#minhaDiv{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: 20px;
+}
+
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color:aqua;
+    margin: 20px;
+}

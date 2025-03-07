@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="restaurante.css">
+</head>
+<body>
+    <div class="conteiner">
+        <h1> Menu restaurante </h1>
+        <div class="menu">
+            <label>Escolha seu prato:</label>
+            <select id="prato">
+                <option value="0">Selecione seu prato</option>
+                <option value="30">Raviolli - R$30,00</option>
+                <option value="50">churras  - R$50,00</option>
+                <option value="100">japa - R$100,00</option>
+            </select>
+        </div>
+
+        <div class="quantidade">
+            <label>Quantidade</label>
+            <input type="number" id="quantidade" min="1" value="1">
+           
+        </div>
+        <button onclick="CalcularTotal()">Calcular</button>
+
+        <p id="resultado"></p>
+    </div>
+    <script src="scriptRestaurante.js"></script>
+</body>
+</html>
