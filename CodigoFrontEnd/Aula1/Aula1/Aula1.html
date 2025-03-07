@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 de FrontEnd</title>
+</head>
+<body>
+    <h1>Minha primeira aula de javascript</h1>
+    <script>
+        ////////////////////Interação com o usuário///////////////////////////////////
+        //Alert
+        alert("Ola mundo, estou quenrando uma maldição")
+        //inputs do usuário
+        prompt("Qual sua materia favorita")
+        //confirmação
+        confirm("Voce ama Front né")
+
+        /////////////////////Variaveis//////////////////////////
+        let nota1 = Number(prompt("Digite uma nota"));
+        let nota2 = Number(prompt("Digite uma nota"));
+        let nota3 = Number(prompt("Digite uma nota"));
+
+        media = (nota1 + nota2 + nota3)/3
+        //exibição em tela
+        document.write(`Sua media é de ${media}<br>`)
+
+
+        //condicionais
+        if(media >= 6){
+            document.write("você está aprovado </br>")
+        }
+        else{
+            document.write("Reprovado! </br>")
+        }
+
+        ///////////////////laços de repetição///////////////////////////////////
+        //for
+        for(i=1;i<=10;i++){
+            document.write(`${i} <br>`)
+        }
+        //while
+        contador = 10
+        while(contador <= 50){
+            document.write(`valor ${contador} <br>`);
+            contador = contador + 10;
+        }
+
+        //do while
+        let a = 1;
+        do{
+            if(i % 2 !=0){
+                document.write("é Impar <br>")
+            }
+            else{
+                document.write("é par <br>")
+            }
+            i++
+        }while(i<20)
+
+        //switch
+        let opcao = Number(prompt("Escolha uma opção: 1 - Soma, 2 - Subtração, 3 - Multiplicação, 4 - Divisão"))
+        let valor = Number(prompt("Informe um valor"))
+        let valor2 = Number(prompt("Informe um valor"))
+
+        switch(opcao){
+            case 1 :
+                soma = valor + valor2
+                document.write(`A soma é de ${soma}`)
+                break;
+            case 2 :
+                sub = valor - valor2
+                document.write(`A subtração é de ${sub}`)
+                break;
+            case 3 :
+                mult = valor *  valor2
+                document.write(`A multiplicação é de ${mult}`)
+                break;
+            case 4 :
+                div = valor /  valor2
+                document.write(`A divisao é de ${div}`)
+                break;
+            default:
+                document.write("Opção inválida. Escolha um número entre 1 e 4.");
+        }
+
+
+    </script>    
+</body>
+</html>
