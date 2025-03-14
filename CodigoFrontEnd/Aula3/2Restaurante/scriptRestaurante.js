@@ -9,6 +9,6 @@ function CalcularTotal(){
     }
     else{
         let total = precoPrato * quantidade
-        document.getElementById('resultado').textContent = `O valor total é de ${total} `
+        document.getElementById('resultado').textContent = `O valor total é de ${total.toFixed(2) }`
     }
 }

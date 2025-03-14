@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Consulta CEP</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Consulta CEP</h1>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" maxlength="8" placeholder="Digite o CEP">
+        <p class="error" id="cepError"></p>
+
+
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" id="logradouro" name="logradouro" readonly>
+
+        <label for="complemento">Complemento:</label>
+        <input type="text" id="complemento" name="complemento" readonly>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" readonly>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" readonly>
+
+        <label for="uf">UF:</label>
+        <input type="text" id="uf" name="uf" readonly>
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
